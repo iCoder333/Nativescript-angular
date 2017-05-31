@@ -1,0 +1,13 @@
+<TabView tabsBackgroundColor="#31bcff" #element [(ngModel)]="selectedIndex">
+    <template tabItem title="{{selectedIndex === 0 ? 'Profile' : 'Test'}}">
+        <StackLayout>
+            <Label text="First tab item"></Label>
+        </StackLayout>
+    </template>
+    <StackLayout *tabItem="{title: 'Stats'}">
+        <Label text="Second tab item"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Settings'}">
+        <Label text="Third tab item"></Label>
+    </StackLayout>
+</TabView>
